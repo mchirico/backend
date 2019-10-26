@@ -33,10 +33,6 @@ steps:
   workingDirectory: '$(modulePath)'
   displayName: 'go get dependencies'
 
-- script: go build -v .
-  workingDirectory: '$(modulePath)'
-  displayName: 'Build'
-
 - script: |
     set -e
     go test -race -coverprofile=coverage.txt -covermode=atomic ./...
